@@ -1,8 +1,23 @@
 # Shimmer LSL streamer
 
+![shimmer streamer 1.jpg](shimmer-streamer-1.jpg)
+
 As the name says, this is a script that allows you to send data from a shimmer device to LSL Lab Recorder, using the LabStreamingLayer.
 
-![shimmer streamer 1.jpg](shimmer-streamer-1.jpg)
+```mermaid
+flowchart LR
+    A(Shimmer GSR+)
+    B(Shimmer LSL Streamer)
+    C(LSL LabRecorder)
+    D(Other streams, e.g. EEG / EYE)
+    
+    A --> B
+    B --> C
+    D --> C
+    
+ 
+```
+
 
 This works with Shimmer GSR+ is a (typically) wristwarn sensor to record skin conductance (also known as EDA or GSR), heart rate (using a photoplythesmographer, PPG), electrocardiography (ECG) as well as kinematics (using 3-axis accelerometer, gyroscope and magnetometer). 
 
@@ -28,6 +43,7 @@ To use/run the script, you will need:
 9. press 'connect' to connect with the shimmer AND start an LSL stream
 10. press 'start' to start streaming data to LSL
 11. press 'stop' to stop streaming data LSL (for now this does not close the LSL stream, just stops sending data over).
+12. Collect and record your data in [https://github.com/labstreaminglayer/App-LabRecorder](LabRecorder) 
 
 # A note on timestamp accuracy (#synchronisation)
 The LSL framework handles the synchronisation (and potential delays) between matlab and LabRecorder / other data streams.
