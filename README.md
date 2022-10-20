@@ -2,6 +2,8 @@
 
 As the name says, this is a script that allows you to send data from a shimmer device to LSL Lab Recorder, using the LabStreamingLayer.
 
+![Screenshot](shimmer streamer 1.jpg)
+
 The script is put together using example files from shimmer and lsl. A GUI was added to make experimental sessions a littel easier to run.
 
 
