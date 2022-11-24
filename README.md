@@ -29,6 +29,9 @@ The script is put together using example files from shimmer and lsl. A GUI was a
 
 # Data
 While in use, the script receives data from the shimmer, and trasmits three variables: _timestamp, skin conductance, and heart-rate._
+# Dependencies you MUST install
+
+1. https://sourceforge.net/projects/realterm/files/Realterm/2.0.0.70/ read page 6 of the shimmer matlab manual. otherwise this will not work.
 
 # Instructions for use
 To use/run the script, you will need:
@@ -50,11 +53,11 @@ The LSL framework handles the synchronisation (and potential delays) between mat
 At present the timestamp of each sample is taken from the clock of the computer, _not_ the clock of the sensor. Therefore, there might be an offset of a few milliseconds between the time a sample is measured and the timestamp associated with it (the time it takes to reach the computer over bluetooth). According to Shimmer this is around 25 milliseconds (max 100ms), which should be sufficient for the measurement of 'slow response signals' such as skin conductance (reaction to stimuli is on the range of a several seconds). Better solutions for more precise timing are welcome!
 
 # Future work / To do
-- select COMPORT from the GUI
-- change sampling rate from the GUI
-- stream other data (gyro, accel, etc)
-- improve timestamp, using the shimmer timestamp (see above time-syncrhonisation)
-- close LSL stream when the user presses stop, or when then GUI is closed
+- [x] select COMPORT from the GUI
+- [ ] change sampling rate from the GUI
+- [ ] stream other data (gyro, accel, etc)
+- [ ] ~~improve timestamp, using the shimmer timestamp (see above time-syncrhonisation)~~ 
+- [ ] close LSL stream when the user presses stop, or when then GUI is closed
 
 # Alternatives
 _I don't like/have Matlab, are there any other options I can use for my experiment?_
